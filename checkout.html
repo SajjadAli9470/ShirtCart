@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Beards On Shirts/checkout.html  22 Nov 2019 09:55:06 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Checkout - Beards On Shirts </title>
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/demo.css"> -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.css">
+    <script src="assets/js/country-states.js"></script>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+
+
+            <div class="header-middle ">
+                <div class="container">
+                    <div class="header-left">
+
+
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/scartlogo.png" alt="Beards On Shirts Logo" width="250" height="50">
+                        </a>
+
+                    </div><!-- End .header-left -->
+
+
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+        </header><!-- End .header -->
+
+        <main class="main">
+
+
+
+            <div class="page-content">
+                <div class="checkout">
+                    <div class="container">
+
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h2 class="checkout-title" style="text-align: center;">Billing Details</h2>
+                                    <!-- End .checkout-title -->
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>First Name *</label>
+                                            <input type="text" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+
+                                        <div class="col-sm-6">
+                                            <label>Last Name *</label>
+                                            <input type="text" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+                                    </div><!-- End .row -->
+
+                                    <label>Company Name (Optional)</label>
+                                    <input type="text" class="form-control">
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <label for="country">Country</label>
+                                                <select id="country">
+                                                    <option>select country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <label for="state">State</label>
+                                                <span id="state-code"><input type="text" id="state"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>Town / City *</label>
+                                            <input type="text" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+
+                                        <div class="col-sm-6">
+                                            <label>Postcode / ZIP *</label>
+                                            <input type="text" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+                                    </div><!-- End .row -->
+
+                                    <label>Street address *</label>
+                                    <input type="text" class="form-control" placeholder="House number and Street name"
+                                        required>
+
+
+
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label>Email address *</label>
+                                            <input type="email" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+
+                                        <div class="col-sm-6">
+                                            <label>Phone *</label>
+                                            <input type="tel" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+                                    </div><!-- End .row -->
+
+
+
+
+
+
+
+
+
+                                    <label>Order notes (optional)</label>
+                                    <textarea class="form-control" cols="30" rows="4"
+                                        placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" onclick="valueChanged()"
+                                            id="checkout-diff-address" checked>
+                                        <label class="custom-control-label" for="checkout-diff-address">Billing address
+                                            is same as shipping?</label>
+                                    </div>
+                                    <!-- End .custom-checkbox -->
+                                    <div id="hideChecked" class="row">
+                                        <div class="col-sm-6">
+                                            <label>Name on (Credit)Card*</label>
+                                            <input type="text" class="form-control" required>
+                                        </div><!-- End .col-sm-6 -->
+
+                                        <div class="col-sm-6">
+                                            <label for="countryies">Country or region</label>
+                                            <select id="countries" name="countries">
+                                                <option>select country</option>
+                                            </select>
+                                        </div><!-- End .col-sm-6 -->
+                                    </div>
+                                    <div class="saveinfo">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" onclick="SaveInfo()"
+                                                id="checkout-diff-info">
+                                            <label class="custom-control-label" for="checkout-diff-info">Save my info
+                                                for secure 1-click checkout</label>
+                                            <p>Pay faster on Mostly Saints and thousands of sites.</p>
+                                            <div id="hideinfo" class="">
+                                                <input id="phone" name="phone" type="tel">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div><!-- End .col-lg-9 -->
+                                <aside class="col-lg-3">
+                                    <div class="summary">
+                                        <h3 class="summary-title">Your Order</h3><!-- End .summary-title -->
+
+                                        <table class="table table-summary">
+
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="./assets/images/products/product-1.jpg" alt=""
+                                                            class="shirt_img" width="100">
+                                                    </td>
+
+                                                    <td>
+                                                        <a class="shirt_name" href="#">Unisex desogned Shirt</a>
+                                                        <p>Size : <span class="shirt_size" style="color:black">XL</span>
+                                                        </p>
+                                                        <p>Color : <span class="shirt_color"
+                                                        style="color:black;">Black</span> </p>
+                                                        <b class="each_total">$80.00</b>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img src="./assets/images/products/product-1.jpg" alt=""
+                                                            class="shirt_img" width="100">
+                                                    </td>
+
+                                                    <td>
+                                                        <a class="shirt_name" href="#">Unisex desogned Shirt</a>
+                                                        <p>Size : <span class="shirt_size" style="color:black">XL</span>
+                                                        </p>
+                                                        <p>Color : <span class="shirt_color"
+                                                        style="color:black;">Black</span> </p>
+                                                        <b class="each_total">$80.00</b>
+                                                    </td>
+                                                </tr>
+                                                <tr class="summary-subtotal">
+                                                    <td>Subtotal:</td>
+                                                    <td>$160.00</td>
+                                                </tr><!-- End .summary-subtotal -->
+                                                <tr>
+                                                    <td>Shipping:</td>
+                                                    <td>$<span class="shippingCost">10</span></td>
+                                                </tr>
+                                                <tr class="summary-total">
+                                                    <td>Total:</td>
+                                                    <td>$170.00</td>
+                                                </tr><!-- End .summary-total -->
+                                            </tbody>
+                                        </table><!-- End .table table-summary -->
+
+                                        <h3 class="summary-title">Payment Method</h3>
+
+                                        <div class="accordion-summary" id="accordion-payment">
+
+
+                                            <!-- <div class="card"> -->
+                                            <div class="card-header" id="heading-5">
+                                                <h2 class="card-title">
+                                                    <a>
+                                                        <b>Credit Card (Stripe)</b>
+                                                        <!-- <img src="assets/images/AllCard.png" alt="payments cards"> -->
+                                                    </a>
+                                                </h2>
+                                                <div class="card-body">
+                                                    <label>
+                                                        Card Number*</label>
+                                                    <input type="text" class="form-control cardnumber" inputmode="numeric"
+                                                        placeholder="1234 1234 1234 1234 " required>
+                                                    <label>Valid Date*</label>
+                                                    <input type="month" class="form-control" required>
+                                                    <label>CVC*</label>
+                                                    <input type="text" class="form-control cvc" required>
+                                                </div>
+                                            </div>
+                                            <!-- End .card-header -->
+                                            <div id="" class="" aria-labelledby="heading-5"
+                                                data-parent="#accordion-payment">
+                                                <!-- End .card-body -->
+                                            </div><!-- End .collapse -->
+                                            <!-- </div> -->
+                                            <!-- End .card -->
+                                        </div><!-- End .accordion -->
+
+                                        <button type="submit" class="btn btn-outline-primary-2 btn-order btn-block">
+                                            <span class="btn-text">Pay <span class="payment"> $160</span></span>
+                                            <span class="btn-hover-text">Proceed to Checkout</span>
+                                        </button>
+                                    </div><!-- End .summary -->
+                                </aside><!-- End .col-lg-3 -->
+                            </div><!-- End .row -->
+                        </form>
+                    </div><!-- End .container -->
+                </div><!-- End .checkout -->
+            </div><!-- End .page-content -->
+        </main><!-- End .main -->
+
+        <footer class="footer">
+
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="footer-copyright">© MostlySaints</p>
+                    <!-- End .footer-copyright -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/BeardsOnShirts/" class="social-icon" target="_blank"
+                            title="Facebook"><i class="icon-facebook-f"></i></a>
+                        <a href="https://twitter.com/beardsonshirts" class="social-icon" target="_blank"
+                            title="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="https://www.instagram.com/beardsonshirts/" class="social-icon" target="_blank"
+                            title="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="mailto:printsbysaints@gmail.com" class="social-icon" target="_blank"
+                            title="Instagram"><i class="icon-envelope"></i></a>
+                        <a href="tel:+1 702-724-6802" class="social-icon" target="_blank" title="Instagram"><i
+                                class="icon-phone"></i></a>
+                    </div>
+                    <figure class="footer-payments">
+                        <a href="https://stripe.com/customers" target="_blank"><img
+                                src="https://s3.amazonaws.com/thedevgeeks.com/images/stripe_secure_payments.png"
+                                alt="Payment methods" width="130"></a>
+                    </figure><!-- End .footer-payments -->
+                </div><!-- End .container -->
+            </div><!-- End .footer-bottom -->
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-wrapper">
+            <span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+            <form action="#" method="get" class="mobile-search">
+                <label for="mobile-search" class="sr-only">Search</label>
+                <input type="search" class="form-control" name="mobile-search" id="mobile-search"
+                    placeholder="Search in..." required>
+                <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+            </form>
+
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/BeardsOnShirts/" class="social-icon" target="_blank"
+                    title="Facebook"><i class="icon-facebook-f"></i></a>
+                <a href="https://twitter.com/beardsonshirts" class="social-icon" target="_blank" title="Twitter"><i
+                        class="icon-twitter"></i></a>
+                <a href="https://www.instagram.com/beardsonshirts/" class="social-icon" target="_blank"
+                    title="Instagram"><i class="icon-instagram"></i></a>
+                <a href="mailto:printsbysaints@gmail.com" class="social-icon" target="_blank" title="Instagram"><i
+                        class="icon-envelope"></i></a>
+                <a href="tel:+1 702-724-6802" class="social-icon" target="_blank" title="Instagram"><i
+                        class="icon-phone"></i></a>
+            </div><!-- End .social-icons -->
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
+    <script src="assets/js/intlTelInput.js"></script>
+    <!-- <script src="assets/js/utils.js"></script> -->
+    <script>
+
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+
+            utilsScript: "assets/js/utils.js",
+        });
+
+        // user country code for selected option
+        let user_country_code = "US";
+
+        (function () {
+            // script https://www.html-code-generator.com/html/drop-down/country-region
+
+            // Get the country name and state name from the imported script.
+            let country_list = country_and_states['country'];
+            let states_list = country_and_states['states'];
+
+            // creating country name drop-down
+            let option = '';
+
+            for (let country_code in country_list) {
+                // set selected option user country
+                let selected = (country_code == user_country_code) ? ' selected' : '';
+                option += '<option value="' + country_code + '"' + selected + '>' + country_list[country_code] + '</option>';
+            }
+            document.getElementById('country').innerHTML = option;
+
+            // creating states name drop-down
+            let text_box = '<input type="text" class="input-text form-control" id="state">';
+            let state_code_id = document.getElementById("state-code");
+
+            function create_states_dropdown() {
+                // get selected country code
+                let country_code = document.getElementById("country").value;
+                let states = states_list[country_code];
+                // invalid country code or no states add textbox
+                if (!states) {
+                    state_code_id.innerHTML = text_box;
+                    return;
+                }
+                let option = '';
+                if (states.length > 0) {
+                    option = '<select id="state">\n';
+                    for (let i = 0; i < states.length; i++) {
+                        option += '<option value="' + states[i].code + '">' + states[i].name + '</option>';
+                    }
+                    option += '</select>';
+                } else {
+                    // create input textbox if no states 
+                    option = text_box
+                }
+                state_code_id.innerHTML = option;
+            }
+
+            // country select change event
+            const country_select = document.getElementById("country");
+            country_select.addEventListener('change', create_states_dropdown);
+
+            create_states_dropdown();
+        })();
+
+    </script>
+
+    <!-- Plugins JS File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.hoverIntent.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/superfish.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
